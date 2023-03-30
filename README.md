@@ -1,1 +1,1 @@
-# DLL_MNIST
+# MLP_MNIST
