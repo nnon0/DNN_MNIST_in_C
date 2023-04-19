@@ -41,7 +41,7 @@ int main() {
 	bias2(b2);
 
 	//getdata(input);
-	forward(w1, w2, b1, b2, input, output); // return Ãâ·Â°ªÀ» È®ÀÎ °¡´É
+	forward(w1, w2, b1, b2, input, output); // return ì¶œë ¥ê°’ì„ í™•ì¸ ê°€ëŠ¥
 
 	for (int i = 0; i < OUTPUTNO; i++)
 		printf("output[%d] : %.9f \n", i, output[i]);
@@ -70,7 +70,7 @@ void weight1(double w[HIDDENNO][INPUTNO]) {
 		fgets(buf, 4096, file);
 		temp1 = strtok_s(buf, " ", &temp2);
 		while (temp1 != NULL) {
-			num = atof(temp1); // ¹®ÀÚ¿­À» ½Ç¼öÇüÀ¸·Î º¯°æ
+			num = atof(temp1); // ë¬¸ìì—´ì„ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ë³€ê²½
 			if (i == 32) {
 				i = 0;
 				j++;
@@ -104,7 +104,7 @@ void weight2(double w[OUTPUTNO][HIDDENNO]) {
 		fgets(buf, 4096, file);
 		temp1 = strtok_s(buf, " ", &temp2);
 		while (temp1 != NULL) {
-			num = atof(temp1); // ¹®ÀÚ¿­À» ½Ç¼öÇüÀ¸·Î º¯°æ
+			num = atof(temp1); // ë¬¸ìì—´ì„ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ë³€ê²½
 			if (i == 10) {
 				i = 0;
 				j++;
@@ -138,7 +138,7 @@ void bias1(double b[HIDDENNO]) {
 		fgets(buf, 4096, file);
 		temp1 = strtok_s(buf, " ", &temp2);
 		while (temp1 != NULL) {
-			num = atof(temp1); // ¹®ÀÚ¿­À» ½Ç¼öÇüÀ¸·Î º¯°æ
+			num = atof(temp1); // ë¬¸ìì—´ì„ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ë³€ê²½
 			b[i] = num;
 			i++;
 			temp1 = strtok_s(NULL, " ", &temp2);
@@ -167,7 +167,7 @@ void bias2(double b[OUTPUTNO]) {
 		fgets(buf, 4096, file);
 		temp1 = strtok_s(buf, " ", &temp2);
 		while (temp1 != NULL) {
-			num = atof(temp1); // ¹®ÀÚ¿­À» ½Ç¼öÇüÀ¸·Î º¯°æ
+			num = atof(temp1); // ë¬¸ìì—´ì„ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ë³€ê²½
 			b[i] = num;
 			i++;
 			temp1 = strtok_s(NULL, " ", &temp2);
