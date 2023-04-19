@@ -1,1 +1,1 @@
-# MLP_MNIST
+# DNN_MNIST
